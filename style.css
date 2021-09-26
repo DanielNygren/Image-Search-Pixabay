@@ -14,7 +14,7 @@
         grid-template-rows: 1fr 1fr 1fr 1fr;
         margin: auto;
         width: 100%;
-        min-width: 720px;
+        min-width: 480px;
 
         background-image: url(20210914_193247.jpg);
         background-size: cover;
@@ -103,84 +103,84 @@
                                 width: 30px;
                                 height: 30px;
                                 background-color: red;
-                                opacity: 0.5;
+                                opacity: 0.4;
                                 border-radius: 15px;                  
                             }
                             #label-orange{
                                 width: 30px;
                                 height: 30px;
                                 background-color: orange;
-                                opacity: 0.5;
+                                opacity: 0.4;
                                 border-radius: 15px;                           
                             }
                             #label-yellow{
                                 width: 30px;
                                 height: 30px;
                                 background-color: yellow;
-                                opacity: 0.5;
+                                opacity: 0.4;
                                 border-radius: 15px;
                             }
                             #label-green{
                                 width: 30px;
                                 height: 30px;
                                 background-color: green;
-                                opacity: 0.5;
+                                opacity: 0.4;
                                 border-radius: 15px;
                             }
                             #label-turquoise{
                                 width: 30px;
                                 height: 30px;
                                 background-color: turquoise;
-                                opacity: 0.5;
+                                opacity: 0.4;
                                 border-radius: 15px;
                             }
                             #label-blue{
                                 width: 30px;
                                 height: 30px;
                                 background-color: blue;
-                                opacity: 0.5;
+                                opacity: 0.4;
                                 border-radius: 15px;
                             }
                             #label-lilac{
                                 width: 30px;
                                 height: 30px;
                                 background-color: purple;
-                                opacity: 0.5;
+                                opacity: 0.4;
                                 border-radius: 15px;
                             }
                             #label-pink{
                                 width: 30px;
                                 height: 30px;
                                 background-color: pink;
-                                opacity: 0.5;
+                                opacity: 0.4;
                                 border-radius: 15px;
                             }
                             #label-white{
                                 width: 30px;
                                 height: 30px;
                                 background-color: white;
-                                opacity: 0.5;
+                                opacity: 0.4;
                                 border-radius: 15px;
                             }
                             #label-gray{
                                 width: 30px;
                                 height: 30px;
                                 background-color: gray;
-                                opacity: 0.5;
+                                opacity: 0.4;
                                 border-radius: 15px;
                             }
                             #label-black{
                                 width: 30px;
                                 height: 30px;
                                 background-color: black;
-                                opacity: 0.5;
+                                opacity: 0.4;
                                 border-radius: 15px;
                             }
                             #label-brown{
                                 width: 30px;
                                 height: 30px;
                                 background-color: brown;
-                                opacity: 0.5;
+                                opacity: 0.4;
                                 border-radius: 15px;
                                 }
             /* || SUBMIT SEARCH BUTTON*/
@@ -239,14 +239,22 @@
         margin: 10px;
     }
 }
-@media (max-width: 750px){
+@media (max-width: 500px){
     form{
         margin: auto;
     }
-    * label{
-        width: 50px;
-        height: 50px;
+
+    .contianer-heading h1{
+        color: white;
+        font-size: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        font-weight: bold;
+        padding-top: 30px;
+        padding-bottom: 15px;
     }
+
+
     .container-input{
         grid-column: 1 / span 5;
         height: fit-content;
@@ -262,8 +270,67 @@
         max-width: none;
         width: fit-content;
         align-content: center;
-        margin-left: 15%;
     }
+        #label-red{
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;                  
+        }
+        #label-orange{
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;                           
+        }
+        #label-yellow{
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;
+        }
+        #label-green{
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;
+        }
+        #label-turquoise{
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;
+        }
+        #label-blue{
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;
+        }
+        #label-lilac{
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;
+        }
+        #label-pink{
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;
+        }
+        #label-white{
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;
+        }
+        #label-gray{
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;
+        }
+        #label-black{
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;
+        }
+        #label-brown{
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;
+            }
     .container-submit-button{
         grid-column: 1 / span 5;
         grid-row: 3;
