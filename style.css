@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Lobster;
+    src: url(Lobster-Regular.ttf);
+  }
 /* || SITEWIDE */
 *{
     /*border: 1px red solid;*/
@@ -34,8 +38,8 @@
             }
                 .contianer-heading h1{
                     color: white;
-                    font-size: 60px;
-                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 80px;
+                    font-family: Lobster;
                     font-style: italic;
                     font-weight: bold;
                     padding-top: 60px;
@@ -245,11 +249,7 @@
     }
 
     .contianer-heading h1{
-        color: white;
         font-size: 40px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-style: italic;
-        font-weight: bold;
         padding-top: 30px;
         padding-bottom: 15px;
     }
