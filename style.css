@@ -1,3 +1,4 @@
+/*New Font*/
 @font-face {
     font-family: Lobster;
     src: url(Lobster-Regular.ttf);
@@ -8,20 +9,20 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    
-    
+    position: relative;
 }
     /* || BODY*/
     body{
         display: grid;
         grid-template-columns: 1fr 4fr 4fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
         margin: auto;
         width: 100%;
         min-width: 480px;
+        font-family: Lobster;
 
         background-image: url(20210914_193247.jpg);
-        background-size: cover;
+        background-size: unset;
     }
 
         /* || HEADER AND FORM*/
@@ -208,7 +209,7 @@
                     background-color: rgba(56, 56, 56, 0.9);
                 }
     /* || IMAGERY GALERY*/
-    .container-imagery{
+    #container-imagery{
         grid-column: 2 / span 2;
         grid-row: 2;
     }
@@ -216,6 +217,7 @@
     .continer-orientation-buttons{
         grid-column: 2 / span 2;
         grid-row: 3;
+        
     }
     /* || FOOTER*/
     footer{
