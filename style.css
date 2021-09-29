@@ -22,7 +22,10 @@
         font-family: Lobster;
 
         background-image: url(20210914_193247.jpg);
-        background-size: unset;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
         /* || HEADER AND FORM*/
