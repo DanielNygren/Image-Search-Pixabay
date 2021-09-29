@@ -90,7 +90,33 @@
 
     </div>
     <div class="continer-orientation-buttons">
-
+        <nav>
+            <div id="previous">
+                <label id="previous-label" for="previous-input"></label > 
+                    <input class="nav-button" id="previous-input" type="button" name="1" value="&#60" onmousedown="previousButtonClick(this)">                             
+            </div>
+            <div class="page-flex">
+                <label  for="first-page"></label>
+                    <input class="nav-button" id="first-page" type="button" name="first" value="" onmousedown="navFirstPage(this)">
+                
+                <label  for="previous-page"></label>
+                    <input class="nav-button" id="previous-page" type="button" name="previos" value="" onmousedown="navPreviousPage(this)">
+                
+                <label  for="current-page"></label>
+                    <input class="nav-button" id="current-page" type="button" name="previos" value="">
+                
+                <label  for="next-page"></label>
+                    <input class="nav-button" id="next-page" type="button" name="next" value="" onmousedown="navNextPage(this)">
+                
+                <label  for="last-page"></label>
+                    <input class="nav-button" id="last-page" type="button" name="last" value="" onmousedown="navLastPage(this)">
+                
+            </div>
+            <div id="next">
+                <label id="next-label" for="next-input"></label >
+                    <input class="nav-button" id="next-input" type="button" name="1" value="&#62" onmousedown="nextButtonClick(this)">     
+            </div>
+        </nav>
     </div>
     <footer>
     </footer>
