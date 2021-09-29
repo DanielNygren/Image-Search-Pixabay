@@ -6,9 +6,12 @@ console.log(form);
 console.log(inputText);
 let json;
 const API_KEY = "23497905-ebfa1b80f325f860fce195702";
+let pageNumber = 1;
+let pageNumberMax = 1;
+let params;
 
 async function start(){  
-    let url = "https://pixabay.com/api/?"+ urlSearchData;
+    let url = "https://pixabay.com/api/?" + params.toString();
     let respons = await fetch(url);
     json = await respons.json();
 
@@ -17,6 +20,8 @@ async function start(){
     console.log(json)
     console.log(url)
     createImgFromSearchResult(json);
+    numberOfPages();
+    navCurrentPage()
 }
 
 form.onsubmit = event => {
@@ -27,8 +32,8 @@ form.onsubmit = event => {
 
         event.preventDefault();
         const textvalue = form.elements.text.value;
-        const params = new URLSearchParams({
-            page: 1,
+        params = new URLSearchParams({
+            page: pageNumber,
             per_page: 10,
             key: API_KEY,
             q: textvalue,
@@ -36,7 +41,6 @@ form.onsubmit = event => {
         });
 
 
-    urlSearchData = params.toString();
     start();
 
 }
@@ -75,6 +79,16 @@ function checkboxMousLeaveEvent(label){
 
 function createImgContainerFromSerach(){
     let imageryContainer = document.getElementById("container-imagery");
+
+    try{
+        let remove = document.getElementById("created-imagery-container");
+        imageryContainer.removeChild(remove);
+    }
+    catch{
+
+    }
+
+    
     let createdImageryContainer = document.createElement("div");
     imageryContainer.appendChild(createdImageryContainer);
     createdImageryContainer.id = "created-imagery-container";
@@ -87,8 +101,11 @@ function createImgContainerFromSerach(){
 }
 
 function createImgFromSearchResult(json){
+
     createImgContainerFromSerach();
+
     let jsonHits = json.hits;
+
     for (let i = 0; i < 10; i++){
         
         try{
@@ -107,7 +124,6 @@ function createImgFromSearchResult(json){
             createImg.style.width="100%";
             createImg.style.margin="auto"
             createImg.style.maxWidth="400px"
-            createImg.style.position = "relative"
             
             let creatTextContiner = document.createElement("div");
             createImgDiv.appendChild(creatTextContiner);
@@ -119,7 +135,6 @@ function createImgFromSearchResult(json){
             creatTextContiner.style.borderRadius = "10px"
             creatTextContiner.style.backgroundColor = "rgba(56, 56, 56, 0.4)"
             creatTextContiner.style.margin = "auto";
-            creatTextContiner.style.opacity = "1";
             
             let createTextTags = document.createElement("p");
             creatTextContiner.appendChild(createTextTags)
@@ -129,9 +144,89 @@ function createImgFromSearchResult(json){
             creatTextContiner.appendChild(createTextUser)
             createTextUser.textContent = jsonHits[i].user;
         }
-        catch{
-
-        }
+        catch{}
     }
 
+}
+
+function numberOfPages(){
+    pageNumberMax= Math.ceil(json.totalHits/10);
+
+    let lastPageValue = document.getElementById("last-page");
+    lastPageValue.value=pageNumberMax;
+}
+
+function previousButtonClick(previous){
+    if(pageNumber>1){
+        params.set("page" , (pageNumber - parseInt(previous.name)));
+        pageNumber = (pageNumber - parseInt(previous.name));
+    }
+    start();
+}
+
+function nextButtonClick(next){
+    if(pageNumber<pageNumberMax){
+        params.set("page" , (pageNumber + parseInt(next.name)));
+        pageNumber = (pageNumber + parseInt(next.name));
+    }
+    start();
+}
+
+function navFirstPage(firstPage){
+    pageNumber = parseInt(firstPage.value);
+    params.set("page", pageNumber);
+
+    start();
+}
+
+function navPreviousPage(priviousPage){
+    pageNumber = parseInt(priviousPage.value);
+    params.set("page", pageNumber);
+
+    start();
+}
+
+function navCurrentPage(){
+    let firstPage = document.getElementById("first-page");
+    firstPage.value = 1;
+
+    let previousPage = document.getElementById("previous-page");
+        if(pageNumber <= 2){
+            previousPage.hidden = true;
+        }
+        else{
+            previousPage.hidden = false;
+            previousPage.value = pageNumber - 1;
+        }
+
+    let currentPage = document.getElementById("current-page");
+    currentPage.value = pageNumber;
+    currentPage.style.backgroundColor = "black"
+
+    let nextPage = document.getElementById("next-page");
+    if(pageNumber >= (pageNumberMax-1)){
+        nextPage.hidden = true;
+    }
+    else{
+        nextPage.hidden = false;
+        nextPage.value = pageNumber + 1;
+    }
+
+    let lastPage = document.getElementById("last-page");
+    lastPage.value = pageNumberMax;
+    
+}
+
+function navNextPage(nextPage){
+    pageNumber = parseInt(nextPage.value);
+    params.set("page", pageNumber);
+
+    start();
+}
+
+function navLastPage(lastPage){
+    pageNumber = pageNumberMax;
+    params.set("page", pageNumber);
+
+    start();
 }
