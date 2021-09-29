@@ -10,13 +10,12 @@ let pageNumber = 1;
 let pageNumberMax = 1;
 let params;
 
+// Fetching API from Pixabay
 async function start(){  
     let url = "https://pixabay.com/api/?" + params.toString();
     let respons = await fetch(url);
     json = await respons.json();
 
-
-    
     console.log(json)
     console.log(url)
     createImgFromSearchResult(json);
@@ -24,6 +23,7 @@ async function start(){
     navCurrentPage()
 }
 
+// When search button is clicked. Checks which colors-checkboxes are checked and creates a string to send with the other URL search parameters
 form.onsubmit = event => {
     const colorCheckBoxes = Array.from(document.querySelectorAll(".container-color-labels input[type=checkbox]"));
     const activColorCheckboxes = colorCheckBoxes.filter(c => c.checked);
@@ -45,7 +45,7 @@ form.onsubmit = event => {
 
 }
 
-
+// Makes color change from having opacity to 0 opacity when its clicked
 function checkboxCSSChange(color){
     let labelcolor = document.getElementById("label-" + color.value);
     let inputcolor = document.getElementById("input-color-" + color.value);
@@ -60,6 +60,7 @@ function checkboxCSSChange(color){
     }
 }
 
+// Changes color to 0 opacity when mouse hovers
 function checkboxMousEnterEvent(label){
     let labelcolor = document.getElementById(label.id);
     let inputcolor = document.querySelector("#"+label.id + " input");
@@ -68,7 +69,7 @@ function checkboxMousEnterEvent(label){
     }
         
 }
-
+// Puts back opacity when mouse leaves
 function checkboxMousLeaveEvent(label){
     let labelcolor = document.getElementById(label.id);
     let inputcolor = document.querySelector("#"+label.id + " input");
@@ -77,6 +78,7 @@ function checkboxMousLeaveEvent(label){
     }
 }
 
+// Create a div container for the image gallery and place inside the already existing div element "container-imagery"
 function createImgContainerFromSerach(){
     let imageryContainer = document.getElementById("container-imagery");
 
@@ -100,6 +102,7 @@ function createImgContainerFromSerach(){
 
 }
 
+// Create a div for each image, then create img from json result and tag text and add to the div
 function createImgFromSearchResult(json){
 
     createImgContainerFromSerach();
@@ -149,6 +152,7 @@ function createImgFromSearchResult(json){
 
 }
 
+// Check total number of pages from serachresult
 function numberOfPages(){
     pageNumberMax= Math.ceil(json.totalHits/10);
 
