@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Search Pixabay</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styleAss2.css">
+    <script src="JSAss2.js" defer></script>
 </head>
+
 <body>
-    <header class="contianer-header">
-        <div class="contianer-heading">
+    <header class="container-header">
+        <div class="container-heading">
             <h1>Image Search Pixabay</h1>
         </div>
         <div class="container-form">
@@ -20,106 +22,135 @@
                 </div>
                 <div class="container-colors">
                     <div class="container-color-labels">
-                        <label id="label-red" for="input-color-red" onmouseenter="checkboxMousEnterEvent(this)" onmouseleave="checkboxMousLeaveEvent(this)">
-                            <input id="input-color-red" type="checkbox" onchange="checkboxCSSChange(this)" name="color" value="red" >
+                        <label id="label-red" for="input-color-red" onmouseenter="checkboxMouseEnterEvent(this)"
+                            onmouseleave="checkboxMouseLeaveEvent(this)">
+                            <input id="input-color-red" type="checkbox" onchange="checkboxCSSChange(this)" name="color"
+                                value="red">
                         </label>
                     </div>
                     <div class="container-color-labels">
-                        <label id="label-orange" for="input-color-orange" onmouseenter="checkboxMousEnterEvent(this)" onmouseleave="checkboxMousLeaveEvent(this)">
-                            <input id="input-color-orange" type="checkbox" onchange="checkboxCSSChange(this)" name="color" value="orange" >
+                        <label id="label-orange" for="input-color-orange" onmouseenter="checkboxMouseEnterEvent(this)"
+                            onmouseleave="checkboxMouseLeaveEvent(this)">
+                            <input id="input-color-orange" type="checkbox" onchange="checkboxCSSChange(this)"
+                                name="color" value="orange">
                         </label>
                     </div>
                     <div class="container-color-labels">
-                        <label id="label-yellow" for="input-color-yellow" onmouseenter="checkboxMousEnterEvent(this)" onmouseleave="checkboxMousLeaveEvent(this)">
-                            <input id="input-color-yellow" type="checkbox" onchange="checkboxCSSChange(this)" name="color" value="yellow">
+                        <label id="label-yellow" for="input-color-yellow" onmouseenter="checkboxMouseEnterEvent(this)"
+                            onmouseleave="checkboxMouseLeaveEvent(this)">
+                            <input id="input-color-yellow" type="checkbox" onchange="checkboxCSSChange(this)"
+                                name="color" value="yellow">
                         </label>
                     </div>
                     <div class="container-color-labels">
-                        <label id="label-green" for="input-color-green" onmouseenter="checkboxMousEnterEvent(this)" onmouseleave="checkboxMousLeaveEvent(this)">
-                            <input id="input-color-green" type="checkbox" onchange="checkboxCSSChange(this)" name="color" value="green">
+                        <label id="label-green" for="input-color-green" onmouseenter="checkboxMouseEnterEvent(this)"
+                            onmouseleave="checkboxMouseLeaveEvent(this)">
+                            <input id="input-color-green" type="checkbox" onchange="checkboxCSSChange(this)"
+                                name="color" value="green">
                         </label>
                     </div>
                     <div class="container-color-labels">
-                        <label id="label-turquoise" for="input-color-turquoise" onmouseenter="checkboxMousEnterEvent(this)" onmouseleave="checkboxMousLeaveEvent(this)">
-                            <input id="input-color-turquoise" type="checkbox" onchange="checkboxCSSChange(this)" name="color" value="turquoise">
+                        <label id="label-turquoise" for="input-color-turquoise"
+                            onmouseenter="checkboxMouseEnterEvent(this)" onmouseleave="checkboxMouseLeaveEvent(this)">
+                            <input id="input-color-turquoise" type="checkbox" onchange="checkboxCSSChange(this)"
+                                name="color" value="turquoise">
                         </label>
                     </div>
                     <div class="container-color-labels">
-                        <label id="label-blue" for="input-color-blue" onmouseenter="checkboxMousEnterEvent(this)" onmouseleave="checkboxMousLeaveEvent(this)">
-                            <input id="input-color-blue" type="checkbox" onchange="checkboxCSSChange(this)" name="color" value="blue">
+                        <label id="label-blue" for="input-color-blue" onmouseenter="checkboxMouseEnterEvent(this)"
+                            onmouseleave="checkboxMouseLeaveEvent(this)">
+                            <input id="input-color-blue" type="checkbox" onchange="checkboxCSSChange(this)" name="color"
+                                value="blue">
                         </label>
                     </div>
                     <div class="container-color-labels">
-                        <label id="label-lilac" for="input-color-lilac" onmouseenter="checkboxMousEnterEvent(this)" onmouseleave="checkboxMousLeaveEvent(this)">
-                            <input id="input-color-lilac" type="checkbox" onchange="checkboxCSSChange(this)" name="color" value="lilac">
+                        <label id="label-lilac" for="input-color-lilac" onmouseenter="checkboxMouseEnterEvent(this)"
+                            onmouseleave="checkboxMouseLeaveEvent(this)">
+                            <input id="input-color-lilac" type="checkbox" onchange="checkboxCSSChange(this)"
+                                name="color" value="lilac">
                         </label>
                     </div>
                     <div class="container-color-labels">
-                        <label id="label-pink" for="input-color-pink" onmouseenter="checkboxMousEnterEvent(this)" onmouseleave="checkboxMousLeaveEvent(this)">
-                            <input id="input-color-pink" type="checkbox" onchange="checkboxCSSChange(this)" name="color" value="pink">
+                        <label id="label-pink" for="input-color-pink" onmouseenter="checkboxMouseEnterEvent(this)"
+                            onmouseleave="checkboxMouseLeaveEvent(this)">
+                            <input id="input-color-pink" type="checkbox" onchange="checkboxCSSChange(this)" name="color"
+                                value="pink">
                         </label>
                     </div>
                     <div class="container-color-labels">
-                        <label id="label-white" for="input-color-white" onmouseenter="checkboxMousEnterEvent(this)" onmouseleave="checkboxMousLeaveEvent(this)">
-                            <input id="input-color-white" type="checkbox" onchange="checkboxCSSChange(this)" name="color" value="white">
+                        <label id="label-white" for="input-color-white" onmouseenter="checkboxMouseEnterEvent(this)"
+                            onmouseleave="checkboxMouseLeaveEvent(this)">
+                            <input id="input-color-white" type="checkbox" onchange="checkboxCSSChange(this)"
+                                name="color" value="white">
                         </label>
                     </div>
                     <div class="container-color-labels">
-                        <label id="label-gray" for="input-color-gray" onmouseenter="checkboxMousEnterEvent(this)" onmouseleave="checkboxMousLeaveEvent(this)">
-                            <input id="input-color-gray" type="checkbox" onchange="checkboxCSSChange(this)" name="color" value="gray">
+                        <label id="label-gray" for="input-color-gray" onmouseenter="checkboxMouseEnterEvent(this)"
+                            onmouseleave="checkboxMouseLeaveEvent(this)">
+                            <input id="input-color-gray" type="checkbox" onchange="checkboxCSSChange(this)" name="color"
+                                value="gray">
                         </label>
                     </div>
                     <div class="container-color-labels">
-                        <label id="label-black" for="input-color-black" onmouseenter="checkboxMousEnterEvent(this)" onmouseleave="checkboxMousLeaveEvent(this)">
-                            <input id="input-color-black" type="checkbox" onchange="checkboxCSSChange(this)" name="color" value="black">
+                        <label id="label-black" for="input-color-black" onmouseenter="checkboxMouseEnterEvent(this)"
+                            onmouseleave="checkboxMouseLeaveEvent(this)">
+                            <input id="input-color-black" type="checkbox" onchange="checkboxCSSChange(this)"
+                                name="color" value="black">
                         </label>
                     </div>
                     <div class="container-color-labels">
-                        <label id="label-brown" for="input-color-brown" onmouseenter="checkboxMousEnterEvent(this)" onmouseleave="checkboxMousLeaveEvent(this)">
-                            <input id="input-color-brown" type="checkbox" onchange="checkboxCSSChange(this)" name="color" value="brown">
+                        <label id="label-brown" for="input-color-brown" onmouseenter="checkboxMouseEnterEvent(this)"
+                            onmouseleave="checkboxMouseLeaveEvent(this)">
+                            <input id="input-color-brown" type="checkbox" onchange="checkboxCSSChange(this)"
+                                name="color" value="brown">
                         </label>
                     </div>
                 </div>
                 <div class="container-submit-button">
-                    <button id="submit-butten" type="submit">Search</button>
+                    <button id="submit-button" type="submit">Search</button>
                 </div>
             </form>
         </div>
     </header>
-    <div id="container-imagery">
-
-    </div>
-    <div class="continer-orientation-buttons">
-        <nav>
-            <div id="previous">
-                <label id="previous-label" for="previous-input"></label > 
-                    <input class="nav-button" id="previous-input" type="button" name="1" value="&#60" onmousedown="previousButtonClick(this)">                             
-            </div>
-            <div class="page-flex">
-                <label  for="first-page"></label>
-                    <input class="nav-button" id="first-page" type="button" name="first" value="" onmousedown="navFirstPage(this)">
-                
-                <label  for="previous-page"></label>
-                    <input class="nav-button" id="previous-page" type="button" name="previos" value="" onmousedown="navPreviousPage(this)">
-                
-                <label  for="current-page"></label>
-                    <input class="nav-button" id="current-page" type="button" name="previos" value="">
-                
-                <label  for="next-page"></label>
-                    <input class="nav-button" id="next-page" type="button" name="next" value="" onmousedown="navNextPage(this)">
-                
-                <label  for="last-page"></label>
-                    <input class="nav-button" id="last-page" type="button" name="last" value="" onmousedown="navLastPage(this)">
-                
-            </div>
-            <div id="next">
-                <label id="next-label" for="next-input"></label >
-                    <input class="nav-button" id="next-input" type="button" name="1" value="&#62" onmousedown="nextButtonClick(this)">     
-            </div>
-        </nav>
-    </div>
+    <main>
+        <div id="container-imagery"></div>
+    </main>
     <footer>
+        <div class="container-orientation-buttons">
+            <nav>
+                <div id="previous">
+                    <label id="previous-label" for="previous-input"></label>
+                    <input class="nav-button" id="previous-input" type="button" name="1" value="&#60"
+                        onmousedown="previousButtonClick(this)">
+                </div>
+                <div class="page-flex">
+                    <label for="first-page"></label>
+                    <input class="nav-button" id="first-page" type="button" name="first" value=""
+                        onmousedown="navFirstPage(this)">
+    
+                    <label for="previous-page"></label>
+                    <input class="nav-button" id="previous-page" type="button" name="previos" value=""
+                        onmousedown="navPreviousPage(this)">
+    
+                    <label for="current-page"></label>
+                    <input class="nav-button" id="current-page" type="button" name="previos" value="">
+    
+                    <label for="next-page"></label>
+                    <input class="nav-button" id="next-page" type="button" name="next" value=""
+                        onmousedown="navNextPage(this)">
+    
+                    <label for="last-page"></label>
+                    <input class="nav-button" id="last-page" type="button" name="last" value=""
+                        onmousedown="navLastPage(this)">
+    
+                </div>
+                <div id="next">
+                    <label id="next-label" for="next-input"></label>
+                    <input class="nav-button" id="next-input" type="button" name="1" value="&#62"
+                        onmousedown="nextButtonClick(this)">
+                </div>
+            </nav>
+        </div>
     </footer>
 </body>
-
 </html>
