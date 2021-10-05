@@ -110,89 +110,50 @@
                         .container-color-labels label input{
                             display: none;
                         }
-                            #label-red{
+                            .color-labels{
                                 width: 30px;
                                 height: 30px;
-                                background-color: red;
                                 opacity: 0.4;
                                 border-radius: 15px;                  
                             }
+                            .color-labels:hover{
+                                opacity: 1;
+                            }
+                            #label-red{
+                                background-color: red;
+                            }
                             #label-orange{
-                                width: 30px;
-                                height: 30px;
-                                background-color: orange;
-                                opacity: 0.4;
-                                border-radius: 15px;                           
+                                background-color: orange;                          
                             }
                             #label-yellow{
-                                width: 30px;
-                                height: 30px;
                                 background-color: yellow;
-                                opacity: 0.4;
-                                border-radius: 15px;
                             }
                             #label-green{
-                                width: 30px;
-                                height: 30px;
                                 background-color: green;
-                                opacity: 0.4;
-                                border-radius: 15px;
                             }
                             #label-turquoise{
-                                width: 30px;
-                                height: 30px;
                                 background-color: turquoise;
-                                opacity: 0.4;
-                                border-radius: 15px;
                             }
                             #label-blue{
-                                width: 30px;
-                                height: 30px;
                                 background-color: blue;
-                                opacity: 0.4;
-                                border-radius: 15px;
                             }
                             #label-lilac{
-                                width: 30px;
-                                height: 30px;
                                 background-color: purple;
-                                opacity: 0.4;
-                                border-radius: 15px;
                             }
                             #label-pink{
-                                width: 30px;
-                                height: 30px;
                                 background-color: pink;
-                                opacity: 0.4;
-                                border-radius: 15px;
                             }
                             #label-white{
-                                width: 30px;
-                                height: 30px;
                                 background-color: white;
-                                opacity: 0.4;
-                                border-radius: 15px;
                             }
                             #label-gray{
-                                width: 30px;
-                                height: 30px;
                                 background-color: gray;
-                                opacity: 0.4;
-                                border-radius: 15px;
                             }
                             #label-black{
-                                width: 30px;
-                                height: 30px;
                                 background-color: black;
-                                opacity: 0.4;
-                                border-radius: 15px;
                             }
                             #label-brown{
-                                width: 30px;
-                                height: 30px;
                                 background-color: brown;
-                                opacity: 0.4;
-                                border-radius: 15px;
                                 }
             /* || SUBMIT SEARCH BUTTON*/
             .container-submit-button{
@@ -336,66 +297,11 @@
         width: fit-content;
         align-content: center;
     }
-        #label-red{
+        .color-labels{
             width: 56px;
             height: 56px;
             border-radius: 28px;                  
         }
-        #label-orange{
-            width: 56px;
-            height: 56px;
-            border-radius: 28px;                           
-        }
-        #label-yellow{
-            width: 56px;
-            height: 56px;
-            border-radius: 28px;
-        }
-        #label-green{
-            width: 56px;
-            height: 56px;
-            border-radius: 28px;
-        }
-        #label-turquoise{
-            width: 56px;
-            height: 56px;
-            border-radius: 28px;
-        }
-        #label-blue{
-            width: 56px;
-            height: 56px;
-            border-radius: 28px;
-        }
-        #label-lilac{
-            width: 56px;
-            height: 56px;
-            border-radius: 28px;
-        }
-        #label-pink{
-            width: 56px;
-            height: 56px;
-            border-radius: 28px;
-        }
-        #label-white{
-            width: 56px;
-            height: 56px;
-            border-radius: 28px;
-        }
-        #label-gray{
-            width: 56px;
-            height: 56px;
-            border-radius: 28px;
-        }
-        #label-black{
-            width: 56px;
-            height: 56px;
-            border-radius: 28px;
-        }
-        #label-brown{
-            width: 56px;
-            height: 56px;
-            border-radius: 28px;
-            }
     .container-submit-button{
         grid-column: 1 / span 5;
         grid-row: 3;
@@ -406,5 +312,4 @@
     #submit-button{
         float: none;
     }
-
 }
