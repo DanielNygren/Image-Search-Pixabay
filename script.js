@@ -62,23 +62,6 @@ function checkboxCSSChange(color) {
     }
 }
 
-// Changes color to 0 opacity when mouse hovers
-function checkboxMouseEnterEvent(label) {
-    let labelcolor = document.getElementById(label.id);
-    let inputcolor = document.querySelector("#" + label.id + " input");
-    if (inputcolor.checked != true) {
-        labelcolor.style.opacity = 1;
-    }
-
-}
-// Puts back opacity when mouse leaves
-function checkboxMouseLeaveEvent(label) {
-    let labelcolor = document.getElementById(label.id);
-    let inputcolor = document.querySelector("#" + label.id + " input");
-    if (inputcolor.checked != true) {
-        labelcolor.style.opacity = 0.4;
-    }
-}
 
 // Create a div container for the image gallery and place inside the already existing div element "container-imagery"
 function createImgContainerFromSearch() {
@@ -219,6 +202,27 @@ function navCurrentPage() {
 
     let lastPage = document.getElementById("last-page");
     lastPage.value = pageNumberMax;
+
+    const previousButton = document.getElementById("previous-input");
+    const nextButton = document.getElementById("next-input");
+
+    if(pageNumber <= 1){
+        firstPage.hidden = true;
+        previousButton.hidden = true;
+    }
+    else{
+        firstPage.hidden = false;
+        previousButton.hidden = false;
+    }
+
+    if(pageNumber >= pageNumberMax){
+        lastPage.hidden = true;
+        nextButton.hidden = true;
+    }
+    else{
+        lastPage.hidden = false;
+        nextButton.hidden = false;
+    }
 
 }
 
